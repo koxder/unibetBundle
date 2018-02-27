@@ -1,12 +1,12 @@
 {
-    "name": "cduran/unibet-api-client",
+    "name": "koxder/unibet-api-client",
     "description": "Bundle to consume unibet API.",
     "keywords": ["template", "composer", "package"],
-    "license": "DBAD",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Castor Duran",
-            "email": "castor.duran@gmail.com"
+            "name": "Javier Diaz",
+            "email": "koxder@gmail.com"
         }
     ],
     "type": "project",
