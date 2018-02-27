@@ -26,11 +26,21 @@ response    [optional] =
 ## Example
 
 ``` php
-$var = new Client(["app_key" => "secret_app_key",
+use UnibetApiClient\Client;
+use UnibetApiClient\NotFoundException;
+
+$client = new Client(["app_key" => "secret_app_key",
                    "app_id" => "secret_api_key",
                    "type_of_bet" => 1,
                    "response" => json
                     ]);
+
+try{
+    $bets = client->getBets('123456677');
+    print_r($bets);
+}catch (NotFoundException as $e){
+    print("Resource not found");
+}
 ```
 
 
