@@ -10,6 +10,7 @@
         }
     ],
     "type": "project",
+    "minimum-stability": "stable",
     "require": {
 		"php": ">=5.4",
         "guzzlehttp/guzzle": "^6.3"
