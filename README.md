@@ -53,7 +53,7 @@ docker build -t unibet .
 docker run -v $(pwd):/app --rm -it unibet vendor/bin/phpunit tests/UnibetClientTest.php
 ```
 
-## Composer
+## Using docker
 
 ```sh
 docker run -v $(pwd):/app --rm -it composer/composer install
