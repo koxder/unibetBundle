@@ -9,7 +9,7 @@
             "email": "koxder@gmail.com"
         }
     ],
-    "type": "project",
+    "type": "package",
     "minimum-stability": "stable",
     "require": {
 		"php": ">=5.4",

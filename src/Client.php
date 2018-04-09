@@ -80,10 +80,10 @@ class Client {
         try {
             $this->response = $this->client->request('GET', $url, ['query' => $this->getDefaultArguments()]);
         }catch (ClientException $e) {
-            throw new NotFoundExceptionUnibet();
+            throw new NotFoundExceptionUnibet($e->getMessage());
         }
         catch (ServerException $e) {
-            throw new NotFoundExceptionUnibet();
+            throw new NotFoundExceptionUnibet($e->getMessage());
         }
     }
 
