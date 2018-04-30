@@ -7,12 +7,12 @@ use UnibetApiClient\NotFoundException as NotFoundExceptionUnibet;
 use GuzzleHttp\Client as GuzzleClient;
 
 /**
-*  Client to request Unibet API
-*
+ *  Client to request Unibet API
+ *
 
-*
-*  @author Castor Duran
-*/
+ *
+ *  @author Castor Duran
+ */
 
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
@@ -129,12 +129,13 @@ class Client {
     }
 
     public function getLiveEvents($group_id){
-
-        $url = $this->event_live_url. $group_id .".". $this->response_format;
-        $this->sendRequest($url);
-
-        return $this->getContent();
-
+        try{
+            $url = $this->event_live_url. $group_id .".". $this->response_format;
+            $this->sendRequest($url);
+            return $this->getContent();
+        }catch(NotFoundExceptionUnibet $e){
+            return [];
+        }
     }
 
     public function getBets($event_id){

@@ -1,11 +1,7 @@
 <?php
 namespace UnibetApiClient;
-/**
- * Created by PhpStorm.
- * User: castor
- * Date: 23/02/2018
- * Time: 10:33
- */
+
+
 class Configuration {
 
     const JSON_RESPONSE = 'json';
