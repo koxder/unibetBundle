@@ -20,6 +20,7 @@ class Configuration {
     const BASE_URI  = "http://api.unicdn.net";
     const GROUP_URL = "/v1/feeds/sportsbook/groups.";
     const EVENT_URL = "/v1/feeds/sportsbook/event/group/";
+    const EVENT__LIVE_URL = "/v1/feeds/sportsbook/betoffer/live/group/";
     const BETS_URL  = "/v1/feeds/sportsbook/betoffer/event/";
     const SUPPORTED_SITES_URL  = "/v1/feeds/sportsbook/supported/sites.";
 

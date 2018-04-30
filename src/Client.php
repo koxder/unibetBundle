@@ -7,12 +7,11 @@ use UnibetApiClient\NotFoundException as NotFoundExceptionUnibet;
 use GuzzleHttp\Client as GuzzleClient;
 
 /**
-*  A sample class
+*  Client to request Unibet API
 *
-*  Use this section to define what this class is doing, the PHPDocumentator will use this
-*  to automatically generate an API documentation using this information.
+
 *
-*  @author yourname
+*  @author Castor Duran
 */
 
 use GuzzleHttp\Exception\ClientException;
@@ -30,6 +29,7 @@ class Client {
 
     private $group_url = ConfigurationUnibet::GROUP_URL;
     private $event_url = ConfigurationUnibet::EVENT_URL;
+    private $event_live_url = ConfigurationUnibet::EVENT_LIVE_URL;
     private $bets_url = ConfigurationUnibet::BETS_URL;
     private $supported_places_url = ConfigurationUnibet::SUPPORTED_SITES_URL;
 
@@ -119,9 +119,18 @@ class Client {
 
     }
 
-    public function getEvents($events_id){
+    public function getEvents($group_id){
 
-        $url = $this->event_url. $events_id .".". $this->response_format;
+        $url = $this->event_url. $group_id .".". $this->response_format;
+        $this->sendRequest($url);
+
+        return $this->getContent();
+
+    }
+
+    public function getLiveEvents($group_id){
+
+        $url = $this->event_live_url. $group_id .".". $this->response_format;
         $this->sendRequest($url);
 
         return $this->getContent();
