@@ -18,6 +18,8 @@ class Configuration {
     const EVENT_URL = "/v1/feeds/sportsbook/event/group/";
     const EVENT_LIVE_URL = "/v1/feeds/sportsbook/betoffer/live/group/";
     const BETS_URL  = "/v1/feeds/sportsbook/betoffer/event/";
+    const BETS_LIVE_URL  = "/v1/feeds/sportsbook/betoffer/live/event/";
     const SUPPORTED_SITES_URL  = "/v1/feeds/sportsbook/supported/sites.";
+
 
 }
