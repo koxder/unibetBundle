@@ -32,6 +32,7 @@ class Client {
     private $event_live_url = ConfigurationUnibet::EVENT_LIVE_URL;
     private $bets_url = ConfigurationUnibet::BETS_URL;
     private $bets_live_url = ConfigurationUnibet::BETS_LIVE_URL;
+    private $data_live_url = ConfigurationUnibet::DATA_LIVE_URL;
     private $supported_places_url = ConfigurationUnibet::SUPPORTED_SITES_URL;
 
     private $type_of_bet = ConfigurationUnibet::MATCH_BET;
@@ -151,6 +152,15 @@ class Client {
     public function getLiveBets($event_id){
 
         $url = $this->bets_live_url. $event_id .".".$this->response_format;
+        $this->sendRequest($url);
+
+        return $this->getContent();
+
+    }
+
+    public function getLiveData($event_id){
+
+        $url = $this->data_live_url. $event_id ."livedata.".$this->response_format;
         $this->sendRequest($url);
 
         return $this->getContent();
