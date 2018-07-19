@@ -160,7 +160,7 @@ class Client {
 
     public function getLiveData($event_id){
 
-        $url = $this->data_live_url. $event_id ."livedata.".$this->response_format;
+        $url = $this->data_live_url. $event_id ."/livedata.".$this->response_format;
         $this->sendRequest($url);
 
         return $this->getContent();
